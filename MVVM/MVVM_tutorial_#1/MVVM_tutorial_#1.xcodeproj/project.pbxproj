@@ -13,6 +13,9 @@
 		ED81D879263AB20F00487450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED81D877263AB20F00487450 /* Main.storyboard */; };
 		ED81D87B263AB21000487450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED81D87A263AB21000487450 /* Assets.xcassets */; };
 		ED81D87E263AB21000487450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED81D87C263AB21000487450 /* LaunchScreen.storyboard */; };
+		ED81D886263ADE7500487450 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81D885263ADE7500487450 /* Models.swift */; };
+		ED81D888263ADE9100487450 /* PersonFollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81D887263ADE9100487450 /* PersonFollowingTableViewCell.swift */; };
+		ED81D88A263AE00100487450 /* PersonFollowingTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81D889263AE00100487450 /* PersonFollowingTableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		ED81D87A263AB21000487450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED81D87D263AB21000487450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED81D87F263AB21000487450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED81D885263ADE7500487450 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		ED81D887263ADE9100487450 /* PersonFollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableViewCell.swift; sourceTree = "<group>"; };
+		ED81D889263AE00100487450 /* PersonFollowingTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFollowingTableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		ED81D870263AB20F00487450 /* MVVM_tutorial_#1 */ = {
 			isa = PBXGroup;
 			children = (
+				ED81D890263AEE0D00487450 /* Source */,
+				ED81D88F263AEDFB00487450 /* Resource */,
+			);
+			path = "MVVM_tutorial_#1";
+			sourceTree = "<group>";
+		};
+		ED81D88B263AEDD100487450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED81D875263AB20F00487450 /* ViewController.swift */,
+				ED81D887263ADE9100487450 /* PersonFollowingTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED81D88C263AEDD500487450 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED81D889263AE00100487450 /* PersonFollowingTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED81D88D263AEDD900487450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED81D885263ADE7500487450 /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED81D88E263AEDED00487450 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				ED81D871263AB20F00487450 /* AppDelegate.swift */,
 				ED81D873263AB20F00487450 /* SceneDelegate.swift */,
-				ED81D875263AB20F00487450 /* ViewController.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		ED81D88F263AEDFB00487450 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				ED81D877263AB20F00487450 /* Main.storyboard */,
 				ED81D87A263AB21000487450 /* Assets.xcassets */,
 				ED81D87C263AB21000487450 /* LaunchScreen.storyboard */,
 				ED81D87F263AB21000487450 /* Info.plist */,
 			);
-			path = "MVVM_tutorial_#1";
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ED81D890263AEE0D00487450 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ED81D88E263AEDED00487450 /* Support */,
+				ED81D88D263AEDD900487450 /* Model */,
+				ED81D88C263AEDD500487450 /* ViewModel */,
+				ED81D88B263AEDD100487450 /* View */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED81D876263AB20F00487450 /* ViewController.swift in Sources */,
+				ED81D88A263AE00100487450 /* PersonFollowingTableViewCellViewModel.swift in Sources */,
+				ED81D888263ADE9100487450 /* PersonFollowingTableViewCell.swift in Sources */,
 				ED81D872263AB20F00487450 /* AppDelegate.swift in Sources */,
 				ED81D874263AB20F00487450 /* SceneDelegate.swift in Sources */,
+				ED81D886263ADE7500487450 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM_tutorial_#1/Info.plist";
+				INFOPLIST_FILE = "MVVM_tutorial_#1/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM_tutorial_#1/Info.plist";
+				INFOPLIST_FILE = "MVVM_tutorial_#1/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
