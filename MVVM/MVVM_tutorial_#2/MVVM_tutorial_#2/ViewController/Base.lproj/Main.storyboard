@@ -27,7 +27,7 @@
         <!--메모 목록-->
         <scene sceneID="Xvv-SA-brD">
             <objects>
-                <viewController id="chq-u5-Gx1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoListViewController" id="chq-u5-Gx1" customClass="MemoListViewController" customModule="MVVM_tutorial__2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHb-V9-55c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
         <!--메모 보기-->
         <scene sceneID="Jub-hu-E3O">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" id="lYM-cz-atW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoDetailViewController" id="lYM-cz-atW" customClass="MemoDetailViewController" customModule="MVVM_tutorial__2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YJn-K1-Uz9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
         <!--새 메모-->
         <scene sceneID="Z1v-Lv-AIp">
             <objects>
-                <viewController id="CVJ-GH-xfK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoComposeViewController" id="CVJ-GH-xfK" customClass="MemoComposeViewController" customModule="MVVM_tutorial__2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oXo-T9-kgJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
