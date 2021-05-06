@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04A76EBA95C07E43214998E3 /* Pods_MVVM_tutorial__2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA5A0559DCB77525F4B24CA /* Pods_MVVM_tutorial__2.framework */; };
+		ED6A8A7126440F2C006DDD6D /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A8A7026440F2C006DDD6D /* MemoryStorage.swift */; };
 		EDBC243F263E7A0A00A733D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC243E263E7A0A00A733D1 /* AppDelegate.swift */; };
 		EDBC2441263E7A0A00A733D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC2440263E7A0A00A733D1 /* SceneDelegate.swift */; };
 		EDBC2446263E7A0A00A733D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC2444263E7A0A00A733D1 /* Main.storyboard */; };
@@ -15,12 +16,14 @@
 		EDBC244B263E7A0B00A733D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBC2449263E7A0B00A733D1 /* LaunchScreen.storyboard */; };
 		EDBC2454263E7A9100A733D1 /* MVVM_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDBC2452263E7A9100A733D1 /* MVVM_Model.xcdatamodeld */; };
 		EDBC245B263E98EE00A733D1 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC245A263E98EE00A733D1 /* Memo.swift */; };
+		EDBC245D263E9A2700A733D1 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBC245C263E9A2700A733D1 /* MemoStorageType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C59601A850C4D5C31A6E4A3 /* Pods-MVVM_tutorial_#2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_tutorial_#2.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_tutorial_#2/Pods-MVVM_tutorial_#2.debug.xcconfig"; sourceTree = "<group>"; };
 		3EA5A0559DCB77525F4B24CA /* Pods_MVVM_tutorial__2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_tutorial__2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A65EF0ED029E8244B9D77C0 /* Pods-MVVM_tutorial_#2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_tutorial_#2.release.xcconfig"; path = "Target Support Files/Pods-MVVM_tutorial_#2/Pods-MVVM_tutorial_#2.release.xcconfig"; sourceTree = "<group>"; };
+		ED6A8A7026440F2C006DDD6D /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		EDBC243B263E7A0A00A733D1 /* MVVM_tutorial_#2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM_tutorial_#2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBC243E263E7A0A00A733D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBC2440263E7A0A00A733D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		EDBC244C263E7A0B00A733D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBC2453263E7A9100A733D1 /* MVVM_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MVVM_CoreData.xcdatamodel; sourceTree = "<group>"; };
 		EDBC245A263E98EE00A733D1 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		EDBC245C263E9A2700A733D1 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,22 @@
 				7A65EF0ED029E8244B9D77C0 /* Pods-MVVM_tutorial_#2.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED6A8A6D26440EC6006DDD6D /* MemoryStorage */ = {
+			isa = PBXGroup;
+			children = (
+				ED6A8A7026440F2C006DDD6D /* MemoryStorage.swift */,
+			);
+			path = MemoryStorage;
+			sourceTree = "<group>";
+		};
+		ED6A8A6E26440F02006DDD6D /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EDBC2452263E7A9100A733D1 /* MVVM_Model.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 		EDBC2432263E7A0A00A733D1 = {
@@ -91,7 +111,6 @@
 				EDBC2440263E7A0A00A733D1 /* SceneDelegate.swift */,
 				EDBC2447263E7A0B00A733D1 /* Assets.xcassets */,
 				EDBC244C263E7A0B00A733D1 /* Info.plist */,
-				EDBC2452263E7A9100A733D1 /* MVVM_Model.xcdatamodeld */,
 			);
 			path = "MVVM_tutorial_#2";
 			sourceTree = "<group>";
@@ -123,6 +142,9 @@
 		EDBC2458263E97E400A733D1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				ED6A8A6E26440F02006DDD6D /* CoreDataStorage */,
+				ED6A8A6D26440EC6006DDD6D /* MemoryStorage */,
+				EDBC245C263E9A2700A733D1 /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -248,7 +270,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6A8A7126440F2C006DDD6D /* MemoryStorage.swift in Sources */,
 				EDBC243F263E7A0A00A733D1 /* AppDelegate.swift in Sources */,
+				EDBC245D263E9A2700A733D1 /* MemoStorageType.swift in Sources */,
 				EDBC2454263E7A9100A733D1 /* MVVM_Model.xcdatamodeld in Sources */,
 				EDBC2441263E7A0A00A733D1 /* SceneDelegate.swift in Sources */,
 				EDBC245B263E98EE00A733D1 /* Memo.swift in Sources */,
