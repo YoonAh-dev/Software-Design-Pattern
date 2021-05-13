@@ -22,6 +22,7 @@ extension Scene {
         case .list(let viewModel):
             // ViewModel은 NavigationController에 embeded되어있는 rootViewController에 binding
             // return 할 때는 navigationController를 return 해야 함
+            // scene를 생성하고 연관값인 ViewModel를 binding
             guard let nav = storyboard.instantiateViewController(withIdentifier: "ListNavigation") as? UINavigationController else {
                 fatalError()
             }

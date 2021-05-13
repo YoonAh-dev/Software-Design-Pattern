@@ -27,11 +27,14 @@ class SceneCoordinator: SceneCoordinatorType {
         // 전환 결과를 방출할 Subject
         let subject = PublishSubject<Void>()
         
+        // 여기서 전달된 Scene를 실제 생성
         let target = scene.instantiate()
         
         switch style {
         case .root:
             currentVC = target
+            // 앞에 만들어진 Scene를 root로 지정
+            // 목록 화면을 가지고 있는 navigationController가 실행
             window.rootViewController = target
             subject.onCompleted()
         case .push:
