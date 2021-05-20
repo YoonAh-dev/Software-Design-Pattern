@@ -9,6 +9,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    // navigationController같은 containerViewController라면
+    // 마지막 child를 return하고 나머지의 경우에는 self return
+    // tabbarController나 이런걸 사용하고 있다면 그거에 맞춰서 코드를 수정해줘야 함.
+    var sceneViewController: UIViewController {
+        return self.children.first ?? self
+    }
+}
+
 class SceneCoordinator: SceneCoordinatorType {
     // 리소스 정리
     private let bag = DisposeBag()
@@ -32,26 +41,38 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentVC = target
+            currentVC = target.sceneViewController
             // 앞에 만들어진 Scene를 root로 지정
             // 목록 화면을 가지고 있는 navigationController가 실행
             window.rootViewController = target
             subject.onCompleted()
         case .push:
+            // 메모 화면과 연결된 viewcontroller가 아니라 화면 embed하는 navigationcontroller가
+            // currentVC에 들어가 있다
+            // navigationController가 아니라 가지고 있는 viewcontroller에서 화면 전환을 해야 함
+            // listViewController가 저장되어야 한다는 소리
+            print(currentVC)
             guard let nav = currentVC.navigationController else {
                 subject.onError(TransitionError.navigationControllerMissing)
                 break
             }
             
+            // delegate method가 호출되는 시점마다 next이벤트를 방출하는 control이벤트
+            nav.rx.willShow
+                .subscribe(onNext: { [unowned self] evt in
+                    self.currentVC = evt.viewController.sceneViewController
+                })
+                .disposed(by: bag)
+            
             nav.pushViewController(target, animated: animated)
-            currentVC = target
+            currentVC = target.sceneViewController
             
             subject.onCompleted()
         case .modal:
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
-            currentVC = target
+            currentVC = target.sceneViewController
         }
         
         // subject를 return할때 ignoreElement를 호출하면 Completable로 변환되어 리턴
@@ -69,7 +90,7 @@ class SceneCoordinator: SceneCoordinatorType {
             // modal 방식으로 되어있다면 현재 씬을 dismiss
             if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) {
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             } else if let nav = self.currentVC.navigationController {
