@@ -60,5 +60,10 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
             .bind(to: viewModel.detailAction.inputs)
             .disposed(by: rx.disposeBag)
             // 선택한 메모가 Action으로 전달되고 action에 구현되어 있는 코드가 실행
+        
+        // 삭제와 관련된 control event를 구독하면 swipe to delete가 자동으로 활성화됨
+        listTableView.rx.modelDeleted(Memo.self)
+            .bind(to: viewModel.deleteAction.inputs)
+            .disposed(by: rx.disposeBag)
     }
 }

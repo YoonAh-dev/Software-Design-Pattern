@@ -50,6 +50,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         // action를 사용하는 방식
         editButton.rx.action = viewModel.makeEditAction()
         
+        deleteButton.rx.action = viewModel.makeDeleteAction()
+        
         // tap를 사용하는 방식
         shareButton.rx.tap
             // 더블 탭 막기
