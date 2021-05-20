@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import RxDataSources
+// tableview와 collectionView에 binding할 수 있는 datasource 제공
+// identifiable protocol를 채용해야 함
 
 // 얘네가 같냐 아니냐를 비교할 수 있는 타입
 // Equatable 타입
-struct Memo: Equatable {
+struct Memo: Equatable, IdentifiableType {
     var content: String
     var insertDate: Date
     var identity: String

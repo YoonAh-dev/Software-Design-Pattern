@@ -5,10 +5,15 @@
 //  Created by SHIN YOON AH on 2021/05/06.
 //
 
-import Foundation
+import UIKit
 import RxSwift
 import RxCocoa
 import Action
+import RxDataSources
+
+// section data의 형식: Int
+// row data 형식: Memo
+typealias MemoSectionModel = AnimatableSectionModel<Int, Memo>
 
 // 의존성을 주입하는 생성자와 바인딩에 사용되는 속성과 메소드가 추가됨.
 // 화면 전환과 메모 저장을 모두 처리
@@ -16,7 +21,21 @@ import Action
 // ViewModel 생성하는 시점에 생성자를 통해서 의존성 주입
 class MemoListViewModel: CommonViewModel {
     // TableView와 바인딩할 수 있는 속성 추가
-    var memoList: Observable<[Memo]> {
+    // observable이 section 모델 배열을 방출하도록 해야 함
+    // animatable section model를 사용
+    let dataSource: RxTableViewSectionedAnimatedDataSource<MemoSectionModel> = {
+        let ds = RxTableViewSectionedAnimatedDataSource<MemoSectionModel>(configureCell: {
+            (dataSource, tableView, indexPath, memo) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = memo.content
+            return cell
+        })
+        
+        ds.canEditRowAtIndexPath = { _, _ in return true}
+        return ds
+    }()
+    
+    var memoList: Observable<[MemoSectionModel]> {
         // storage에 저장되어 있는 memoList메소드를 호출하고
         // 메소드가 리턴하는 Observable 그대로 리턴
         return storage.memoList()

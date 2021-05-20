@@ -36,9 +36,7 @@ class MemoListViewController: UIViewController, ViewModelBindableType {
         // cell를 재사용 Queue에서 꺼내서 return하는 부분도 자동으로 처리 -> closure에서 셀 구성 코드만 짜면 됨
         // memo목록을 방출하는 Observable과 tableView를 binding
         viewModel.memoList
-            .bind(to: listTableView.rx.items(cellIdentifier: "cell")) { row, memo, cell in
-                cell.textLabel?.text = memo.content
-            }
+            .bind(to: listTableView.rx.items(dataSource: viewModel.dataSource))
             .disposed(by: rx.disposeBag)
         
         addButton.rx.action = viewModel.makeCreateAction()
