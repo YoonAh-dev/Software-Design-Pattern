@@ -25,6 +25,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
             .drive(navigationItem.rx.title)
             .disposed(by: rx.disposeBag)
         
+        // subject와 binding, subject가 편집한 내용을 다시 방출하도록 수정해야 함
         viewModel.contents
             .bind(to: listTableView.rx.items) { tableview, row, value in
                 switch row {
@@ -43,5 +44,7 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
                 }
             }
             .disposed(by: rx.disposeBag)
+        
+        editButton.rx.action = viewModel.makeEditAction()
     }
 }

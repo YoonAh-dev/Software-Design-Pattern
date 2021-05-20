@@ -46,7 +46,7 @@ class MemoComposeViewModel: CommonViewModel {
         
         self.cancelAction = CocoaAction {
             if let action = cancelAction {
-                action.execute()
+                action.execute(())
             }
             
             return sceneCoordinator.close(animated: true).asObservable().map { _ in }

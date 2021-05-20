@@ -42,4 +42,40 @@ class MemoDetailViewModel: CommonViewModel {
                    sceneCoordinator: sceneCoordinator,
                    storage: storage)
     }
+    
+    // String을 받아서 입력값으로 메모를 업데이트
+    func performUpdate(memo: Memo) -> Action<String, Void> {
+        return Action { input in
+            // observable이 방출하는 게 Void
+            // 하지만 update가 방출하는게 Void가 아님 그래서 error가 발생 그래서 map으로 문제 해결
+            self.storage.update(memo: memo, content: input)
+                .subscribe(onNext: { updated in
+                    // 새로운 내용을 subject에서 next 이벤트로 방출하게 됨
+                    // subject와 binding되어 있는 tableView가
+                    // 새로운 내용으로 update
+                    self.contents.onNext([
+                        updated.content,
+                        self.formatter.string(from: updated.insertDate)
+                    ])
+                })
+                .disposed(by: self.rx.disposeBag)
+            
+            return Observable.empty()
+        }
+    }
+    
+    func makeEditAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let composeViewModel = MemoComposeViewModel(title: "메모 편집",
+                                                        content: self.memo.content,
+                                                        sceneCoordinator: self.sceneCoordinator,
+                                                        storage: self.storage,
+                                                        saveAction: self.performUpdate(memo: self.memo))
+            let composeScene = Scene.compose(composeViewModel)
+            
+            return self.sceneCoordinator.transition(to: composeScene,
+                                                    using: .modal,
+                                                    animated: true).asObservable().map { _ in }
+        }
+    }
 }
