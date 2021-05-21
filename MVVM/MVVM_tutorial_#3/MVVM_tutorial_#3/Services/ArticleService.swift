@@ -42,6 +42,6 @@ class ArticleService {
                 if let articles = response.value?.articles {
                     return completion(nil, articles)
                 }
-        }
+            }
     }
 }
