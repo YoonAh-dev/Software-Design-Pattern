@@ -15,7 +15,7 @@ class Coordinator {
     }
     
     func start() {
-        let rootViewController = RootViewController()
+        let rootViewController = RootViewController(viewModel: RootViewModel(articleService: ArticleService()))
         let navigationRoonViewController = UINavigationController(rootViewController: rootViewController)
         // controller 지정 후 화면에 rendering
         window.rootViewController = navigationRoonViewController
