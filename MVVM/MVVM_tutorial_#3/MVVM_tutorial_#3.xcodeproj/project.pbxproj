@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1A125F26590F5100721244 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A125E26590F5100721244 /* ArticleViewModel.swift */; };
+		ED1A12622659159400721244 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A12612659159400721244 /* ArticleCell.swift */; };
 		ED92B98426573EDB00886FA9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92B98326573EDB00886FA9 /* Article.swift */; };
 		ED92B9872657674300886FA9 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92B9862657674300886FA9 /* ArticleService.swift */; };
 		EDA460EE265815EE00328AA7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA460ED265815EE00328AA7 /* RootViewModel.swift */; };
@@ -25,6 +26,7 @@
 		A5D22AFD7AAE87D43A50A167 /* Pods_MVVM_tutorial__3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_tutorial__3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADE3A28789A105D5D24180B /* Pods-MVVM_tutorial_#3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_tutorial_#3.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_tutorial_#3/Pods-MVVM_tutorial_#3.debug.xcconfig"; sourceTree = "<group>"; };
 		ED1A125E26590F5100721244 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		ED1A12612659159400721244 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		ED92B98326573EDB00886FA9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		ED92B9862657674300886FA9 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		EDA460ED265815EE00328AA7 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 				3DFDA117B7FED14F7413E673 /* Pods-MVVM_tutorial_#3.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED1A12602659158100721244 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A12612659159400721244 /* ArticleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED92B98226573ED000886FA9 /* Models */ = {
@@ -113,6 +123,7 @@
 		EDC67ED526566A5400580E15 /* MVVM_tutorial_#3 */ = {
 			isa = PBXGroup;
 			children = (
+				ED1A12602659158100721244 /* Views */,
 				EDA460EC265815DF00328AA7 /* ViewModels */,
 				ED92B985265766CA00886FA9 /* Services */,
 				ED92B98226573ED000886FA9 /* Models */,
@@ -253,6 +264,7 @@
 				EDA460EE265815EE00328AA7 /* RootViewModel.swift in Sources */,
 				EDC67ED726566A5400580E15 /* AppDelegate.swift in Sources */,
 				ED92B9872657674300886FA9 /* ArticleService.swift in Sources */,
+				ED1A12622659159400721244 /* ArticleCell.swift in Sources */,
 				EDC67ED926566A5400580E15 /* SceneDelegate.swift in Sources */,
 				EDC67EEC26566AE700580E15 /* RootViewController.swift in Sources */,
 				ED92B98426573EDB00886FA9 /* Article.swift in Sources */,
