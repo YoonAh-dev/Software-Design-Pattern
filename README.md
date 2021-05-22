@@ -20,3 +20,8 @@
 - `NewsAPI`를 사용해서 Articles Data 생성
 - [의존성 주입](https://donggyu9410.medium.com/ios-and-swift-%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%A3%BC%EC%9E%85-60faee384274)을 위해서 Protocol 사용
 - RxSwift, RxCocoa, SDWebImage 사용
+
+#### 🌊 MVVM tutorial #4
+- [Example Video](https://www.youtube.com/watch?v=ngblLvDceUw)
+- Swift만 사용해서 MVVM 구성 예제
+- [User Data](https://api.androidhive.info/contacts/)를 사용
