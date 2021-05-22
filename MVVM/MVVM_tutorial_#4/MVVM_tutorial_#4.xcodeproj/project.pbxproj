@@ -13,6 +13,8 @@
 		ED1A1277265921DB00721244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1A1275265921DB00721244 /* Main.storyboard */; };
 		ED1A1279265921DD00721244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED1A1278265921DD00721244 /* Assets.xcassets */; };
 		ED1A127C265921DD00721244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED1A127A265921DD00721244 /* LaunchScreen.storyboard */; };
+		ED1A12852659224800721244 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A12842659224800721244 /* User.swift */; };
+		ED1A12882659241900721244 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A12872659241900721244 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ED1A1278265921DD00721244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED1A127B265921DD00721244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED1A127D265921DD00721244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED1A12842659224800721244 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED1A12872659241900721244 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		ED1A126E265921DB00721244 /* MVVM_tutorial_#4 */ = {
 			isa = PBXGroup;
 			children = (
+				ED1A12832659223A00721244 /* Models */,
+				ED1A1286265923CB00721244 /* ViewModels */,
+				ED1A128A2659262700721244 /* Views */,
+				ED1A12892659257200721244 /* Controllers */,
 				ED1A126F265921DB00721244 /* AppDelegate.swift */,
 				ED1A1271265921DB00721244 /* SceneDelegate.swift */,
-				ED1A1273265921DB00721244 /* ViewController.swift */,
-				ED1A1275265921DB00721244 /* Main.storyboard */,
 				ED1A1278265921DD00721244 /* Assets.xcassets */,
 				ED1A127A265921DD00721244 /* LaunchScreen.storyboard */,
 				ED1A127D265921DD00721244 /* Info.plist */,
 			);
 			path = "MVVM_tutorial_#4";
+			sourceTree = "<group>";
+		};
+		ED1A12832659223A00721244 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A12842659224800721244 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED1A1286265923CB00721244 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A12872659241900721244 /* Parser.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED1A12892659257200721244 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A1273265921DB00721244 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED1A128A2659262700721244 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED1A1275265921DB00721244 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1A12852659224800721244 /* User.swift in Sources */,
 				ED1A1274265921DB00721244 /* ViewController.swift in Sources */,
+				ED1A12882659241900721244 /* Parser.swift in Sources */,
 				ED1A1270265921DB00721244 /* AppDelegate.swift in Sources */,
 				ED1A1272265921DB00721244 /* SceneDelegate.swift in Sources */,
 			);
