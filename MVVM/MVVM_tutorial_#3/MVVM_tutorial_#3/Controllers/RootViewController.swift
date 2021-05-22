@@ -15,10 +15,9 @@ class RootViewController: UIViewController {
     let viewModel: RootViewModel
     let disposeBag = DisposeBag()
     
-    // articles를 subscribe하기 위해서 RxRelay사용
-    private let articles = BehaviorRelay<[Article]>(value: [])
-    var articlesObserver: Observable<[Article]> {
-        return articles.asObservable()
+    private let articleViewModel = BehaviorRelay<[ArticleViewModel]>(value: [])
+    var articleViewModelObserver: Observable<[ArticleViewModel]> {
+        return articleViewModel.asObservable()
     }
     
     // MARK: - LifeCycles
@@ -48,20 +47,16 @@ class RootViewController: UIViewController {
     
     // MARK: - Helpers
     func fetchArticles() {
-        self.viewModel.fetchArticles()
-            .subscribe(onNext: { articles in
-                print(articles)
-                // articles에 articles를 넣어줌
-                // articles에 값이 들어올때마다 이것들을 관찰하고 싶어함
-                self.articles.accept(articles)
-            })
-            .disposed(by: disposeBag)
+        viewModel.fetchArticles().subscribe(onNext: { articleViewModel in
+            self.articleViewModel.accept(articleViewModel)
+        })
+        .disposed(by: disposeBag)
     }
     
     func subscribe() {
-        self.articlesObserver.subscribe(onNext: { articles in
-            // articles의 값이 변화하게 되면
-            // collectionView를 생성을 할건데요, 이 때 collectionView.reloadData함수를 호출해준다
+        self.articleViewModelObserver.subscribe(onNext: { articles in
+            //collection reload
+            print(articles)
         })
         .disposed(by: disposeBag)
     }

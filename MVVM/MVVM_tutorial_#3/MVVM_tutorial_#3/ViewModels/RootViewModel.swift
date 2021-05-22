@@ -21,7 +21,8 @@ final class RootViewModel {
         self.articleService = articleService
     }
     
-    func fetchArticles() -> Observable<[Article]> {
-        articleService.fetchNews()
+    func fetchArticles() -> Observable<[ArticleViewModel]> {
+        // articleViewModel를 반환하는 함수
+        articleService.fetchNews().map { $0.map { ArticleViewModel(article: $0) }}
     }
 }

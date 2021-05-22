@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1A125F26590F5100721244 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A125E26590F5100721244 /* ArticleViewModel.swift */; };
 		ED92B98426573EDB00886FA9 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92B98326573EDB00886FA9 /* Article.swift */; };
 		ED92B9872657674300886FA9 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92B9862657674300886FA9 /* ArticleService.swift */; };
 		EDA460EE265815EE00328AA7 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA460ED265815EE00328AA7 /* RootViewModel.swift */; };
@@ -23,6 +24,7 @@
 		3DFDA117B7FED14F7413E673 /* Pods-MVVM_tutorial_#3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_tutorial_#3.release.xcconfig"; path = "Target Support Files/Pods-MVVM_tutorial_#3/Pods-MVVM_tutorial_#3.release.xcconfig"; sourceTree = "<group>"; };
 		A5D22AFD7AAE87D43A50A167 /* Pods_MVVM_tutorial__3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_tutorial__3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADE3A28789A105D5D24180B /* Pods-MVVM_tutorial_#3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM_tutorial_#3.debug.xcconfig"; path = "Target Support Files/Pods-MVVM_tutorial_#3/Pods-MVVM_tutorial_#3.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1A125E26590F5100721244 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		ED92B98326573EDB00886FA9 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		ED92B9862657674300886FA9 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		EDA460ED265815EE00328AA7 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				EDA460ED265815EE00328AA7 /* RootViewModel.swift */,
+				ED1A125E26590F5100721244 /* ArticleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC67EF0265677F200580E15 /* Coordinator.swift in Sources */,
+				ED1A125F26590F5100721244 /* ArticleViewModel.swift in Sources */,
 				EDA460EE265815EE00328AA7 /* RootViewModel.swift in Sources */,
 				EDC67ED726566A5400580E15 /* AppDelegate.swift in Sources */,
 				ED92B9872657674300886FA9 /* ArticleService.swift in Sources */,
