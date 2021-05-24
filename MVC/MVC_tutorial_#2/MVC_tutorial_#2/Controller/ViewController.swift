@@ -16,15 +16,11 @@ class ViewController: UIViewController {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
     }
-    var emojiChoices = ["🎃", "👻"]
+    var emojiChoices = ["🎃", "👻", "😈", "💩", "🎅🏻", "🧟‍♀️", "🧚🏻", "🏃🏻‍♂️", "👩‍❤️‍👨", "🐤" ,"🐍", "🐝"]
     var emoji: [Int:String] = [:]
 
     @IBOutlet weak var flipCountLabel: UILabel!
     @IBOutlet var cardButtons: [UIButton]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
