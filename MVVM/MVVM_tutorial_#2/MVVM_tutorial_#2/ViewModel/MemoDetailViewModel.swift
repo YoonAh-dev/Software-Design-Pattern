@@ -65,6 +65,7 @@ class MemoDetailViewModel: CommonViewModel {
     }
     
     func makeEditAction() -> CocoaAction {
+        print("edit 생성")
         return CocoaAction { _ in
             let composeViewModel = MemoComposeViewModel(title: "메모 편집",
                                                         content: self.memo.content,
@@ -80,6 +81,7 @@ class MemoDetailViewModel: CommonViewModel {
     }
     
     func makeDeleteAction() -> CocoaAction {
+        print("delete 생성")
         return Action { input in
             self.storage.delete(memo: self.memo)
             return self.sceneCoordinator.close(animated: true).asObservable().map { _ in }
