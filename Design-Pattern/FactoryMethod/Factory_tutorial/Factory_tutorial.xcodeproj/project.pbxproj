@@ -18,6 +18,11 @@
 		EDABEF9D274E48BB0031DE5A /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEF9C274E48BB0031DE5A /* VideoPlayer.swift */; };
 		EDABEFA0274E5DBF0031DE5A /* PlayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEF9F274E5DBF0031DE5A /* PlayerCreator.swift */; };
 		EDABEFA3274E5DFA0031DE5A /* PlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFA2274E5DFA0031DE5A /* PlayerFactory.swift */; };
+		EDABEFA5274E63BF0031DE5A /* CurrencyDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFA4274E63BF0031DE5A /* CurrencyDescribing.swift */; };
+		EDABEFA7274E63F40031DE5A /* Euro.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFA6274E63F40031DE5A /* Euro.swift */; };
+		EDABEFA9274E643B0031DE5A /* UnitedStateDollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFA8274E643B0031DE5A /* UnitedStateDollar.swift */; };
+		EDABEFAB274E64610031DE5A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFAA274E64610031DE5A /* Country.swift */; };
+		EDABEFAD274E64810031DE5A /* CurrencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDABEFAC274E64810031DE5A /* CurrencyFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		EDABEF9C274E48BB0031DE5A /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		EDABEF9F274E5DBF0031DE5A /* PlayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCreator.swift; sourceTree = "<group>"; };
 		EDABEFA2274E5DFA0031DE5A /* PlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactory.swift; sourceTree = "<group>"; };
+		EDABEFA4274E63BF0031DE5A /* CurrencyDescribing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDescribing.swift; sourceTree = "<group>"; };
+		EDABEFA6274E63F40031DE5A /* Euro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Euro.swift; sourceTree = "<group>"; };
+		EDABEFA8274E643B0031DE5A /* UnitedStateDollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitedStateDollar.swift; sourceTree = "<group>"; };
+		EDABEFAA274E64610031DE5A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		EDABEFAC274E64810031DE5A /* CurrencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EDABEF91274E46D10031DE5A /* Player.swift */,
+				EDABEFA4274E63BF0031DE5A /* CurrencyDescribing.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -134,6 +145,8 @@
 			children = (
 				EDABEF9A274E48350031DE5A /* MusicPlayer.swift */,
 				EDABEF9C274E48BB0031DE5A /* VideoPlayer.swift */,
+				EDABEFA6274E63F40031DE5A /* Euro.swift */,
+				EDABEFA8274E643B0031DE5A /* UnitedStateDollar.swift */,
 			);
 			path = "Concrete Product";
 			sourceTree = "<group>";
@@ -142,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				EDABEF9F274E5DBF0031DE5A /* PlayerCreator.swift */,
+				EDABEFAA274E64610031DE5A /* Country.swift */,
 			);
 			path = Creator;
 			sourceTree = "<group>";
@@ -150,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				EDABEFA2274E5DFA0031DE5A /* PlayerFactory.swift */,
+				EDABEFAC274E64810031DE5A /* CurrencyFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -225,9 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDABEFAD274E64810031DE5A /* CurrencyFactory.swift in Sources */,
+				EDABEFA9274E643B0031DE5A /* UnitedStateDollar.swift in Sources */,
+				EDABEFA5274E63BF0031DE5A /* CurrencyDescribing.swift in Sources */,
 				EDABEF92274E46D10031DE5A /* Player.swift in Sources */,
 				EDABEF82274E46310031DE5A /* ViewController.swift in Sources */,
+				EDABEFAB274E64610031DE5A /* Country.swift in Sources */,
 				EDABEF9D274E48BB0031DE5A /* VideoPlayer.swift in Sources */,
+				EDABEFA7274E63F40031DE5A /* Euro.swift in Sources */,
 				EDABEFA3274E5DFA0031DE5A /* PlayerFactory.swift in Sources */,
 				EDABEF7E274E46310031DE5A /* AppDelegate.swift in Sources */,
 				EDABEF9B274E48350031DE5A /* MusicPlayer.swift in Sources */,

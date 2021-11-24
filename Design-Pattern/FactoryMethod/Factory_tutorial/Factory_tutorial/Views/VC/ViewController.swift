@@ -9,9 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Player Factory
+    
     let factory = PlayerFactory()
     lazy var musicPlayer = factory.createPlayer(content: "Call Me Baby", contentType: .music)
     lazy var videoPlayer = factory.createPlayer(content: "Savage MV", contentType: .video)
+    
+    // MARK: - Currency Factory
+    
+    let noCurrencyCode = "No Currency Code Available"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +30,9 @@ class ViewController: UIViewController {
         
         musicPlayer.pause()
         videoPlayer.pause()
+        
+        print(CurrencyFactory.currency(for: .greece)?.code ?? noCurrencyCode) // EUR
+        print(CurrencyFactory.currency(for: .uk)?.code ?? noCurrencyCode) // No Currency Code Available
     }
-
-
 }
 
