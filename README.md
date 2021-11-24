@@ -14,4 +14,4 @@
 ### Design
 | Pattern | tutorial | Description |
 |:---------:|:------:|-----|
-| Factory Method | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/FactoryMethod/Factory_tutorial) | - [Example Page](https://icksw.tistory.com/237) <br/> - Player Factory화를 통한 단순 예제 <br/> - `Product`, `Concrete Product`, `Creator`, `Factory` 생성  |
+| Factory Method | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/FactoryMethod/Factory_tutorial) | - [Example Page](https://icksw.tistory.com/237) <br/> - [Example Page2](https://github.com/ochococo/Design-Patterns-In-Swift#-factory-method) <br/> - Player Factory화를 통한 단순 예제 <br/> - CurrencyDescribing Factory화를 통한 단순 예제 <br/> - `Product`, `Concrete Product`, `Creator`, `Factory` 생성  |
