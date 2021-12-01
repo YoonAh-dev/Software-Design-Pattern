@@ -14,6 +14,9 @@
 		ED66785B27577540007AC51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED66785A27577540007AC51F /* Assets.xcassets */; };
 		ED66785E27577540007AC51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED66785C27577540007AC51F /* LaunchScreen.storyboard */; };
 		ED66786627577550007AC51F /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66786527577550007AC51F /* Adapter.swift */; };
+		ED667890275781A3007AC51F /* NewDeathStarSuperLaserAiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66788F275781A3007AC51F /* NewDeathStarSuperLaserAiming.swift */; };
+		ED667893275781E2007AC51F /* OldDeathStarSuperLaserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED667892275781E2007AC51F /* OldDeathStarSuperLaserTarget.swift */; };
+		ED66789527578230007AC51F /* NewDeathStarSuperLaserTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED66789427578230007AC51F /* NewDeathStarSuperLaserTarget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		ED66785D27577540007AC51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED66785F27577540007AC51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED66786527577550007AC51F /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		ED66788F275781A3007AC51F /* NewDeathStarSuperLaserAiming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeathStarSuperLaserAiming.swift; sourceTree = "<group>"; };
+		ED667892275781E2007AC51F /* OldDeathStarSuperLaserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldDeathStarSuperLaserTarget.swift; sourceTree = "<group>"; };
+		ED66789427578230007AC51F /* NewDeathStarSuperLaserTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeathStarSuperLaserTarget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				ED66785C27577540007AC51F /* LaunchScreen.storyboard */,
 				ED66785F27577540007AC51F /* Info.plist */,
 				ED66786527577550007AC51F /* Adapter.swift */,
+				ED66788F275781A3007AC51F /* NewDeathStarSuperLaserAiming.swift */,
+				ED667892275781E2007AC51F /* OldDeathStarSuperLaserTarget.swift */,
+				ED66789427578230007AC51F /* NewDeathStarSuperLaserTarget.swift */,
 			);
 			path = "Adapter-Example";
 			sourceTree = "<group>";
@@ -142,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6678562757753F007AC51F /* ViewController.swift in Sources */,
+				ED667890275781A3007AC51F /* NewDeathStarSuperLaserAiming.swift in Sources */,
+				ED66789527578230007AC51F /* NewDeathStarSuperLaserTarget.swift in Sources */,
 				ED66786627577550007AC51F /* Adapter.swift in Sources */,
+				ED667893275781E2007AC51F /* OldDeathStarSuperLaserTarget.swift in Sources */,
 				ED6678522757753F007AC51F /* AppDelegate.swift in Sources */,
 				ED6678542757753F007AC51F /* SceneDelegate.swift in Sources */,
 			);
