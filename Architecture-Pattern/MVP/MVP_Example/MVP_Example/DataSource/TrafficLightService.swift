@@ -11,7 +11,7 @@ import Foundation
 /// 데이터 제공자(data provider) 역할을 할 서비스 클래스
 ///
 
-enum TrafficError: Error, LocalizedError {
+enum TrafficError: LocalizedError {
     case invalidTraffic
 
     var errorDescription: String {
@@ -31,8 +31,8 @@ final class TrafficLightService {
 
         if let targetTrafficLight = trafficLights.first(where: { $0.colorName == colorName }) {
             completion(.success(targetTrafficLight))
+        } else {
+            completion(.failure(.invalidTraffic))
         }
-
-        completion(.failure(.invalidTraffic))
     }
 }

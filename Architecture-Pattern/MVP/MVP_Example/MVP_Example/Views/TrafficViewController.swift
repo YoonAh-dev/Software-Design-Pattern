@@ -11,23 +11,46 @@ protocol TrafficLightViewDelegate: AnyObject {
     func displayTrafficLight(description: String)
 }
 
-final class TrafficViewController: UIViewController {
+final class TrafficViewController: UIViewController, TrafficLightViewDelegate {
+
+    // MARK: - ui component
+
+    @IBOutlet weak var descriptionLabel: UILabel!
+
+    // MARK: - property
+
+    private let trafficLightPresenter = TrafficLightPresenter(trafficLightService: TrafficLightService())
+
+    // MARK: - life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.trafficLightPresenter.setViewDelegate(trafficLightViewDelegate: self)
     }
+
+    // MARK: - func
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func displayTrafficLight(description: String) {
+        self.descriptionLabel.text = description
     }
-    */
+
+    // MARK: - selector
+
+
+    @IBAction func touchUpRedLight(_ sender: Any) {
+        self.trafficLightPresenter.trafficLightColorSelected(colorName: "Red")
+    }
+
+    @IBAction func touchUpYellowLight(_ sender: Any) {
+        self.trafficLightPresenter.trafficLightColorSelected(colorName: "Yellow")
+    }
+
+    @IBAction func touchUpGreenLight(_ sender: Any) {
+        self.trafficLightPresenter.trafficLightColorSelected(colorName: "Green")
+    }
+
+    @IBAction func touchUpBlueLight(_ sender: Any) {
+        self.trafficLightPresenter.trafficLightColorSelected(colorName: "Blue")
+    }
 
 }
