@@ -19,6 +19,7 @@
 		B5AE12C329E265FF00F86FF8 /* TrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE12C229E265FF00F86FF8 /* TrafficViewController.swift */; };
 		B5AE12C629E2660B00F86FF8 /* TrafficLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE12C529E2660B00F86FF8 /* TrafficLight.swift */; };
 		B5AE12C929E2661C00F86FF8 /* TrafficLightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE12C829E2661C00F86FF8 /* TrafficLightService.swift */; };
+		B5AE131829E2B1EE00F86FF8 /* TrafficView_Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE131729E2B1EE00F86FF8 /* TrafficView_Mock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B5AE12C229E265FF00F86FF8 /* TrafficViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficViewController.swift; sourceTree = "<group>"; };
 		B5AE12C529E2660B00F86FF8 /* TrafficLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLight.swift; sourceTree = "<group>"; };
 		B5AE12C829E2661C00F86FF8 /* TrafficLightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightService.swift; sourceTree = "<group>"; };
+		B5AE131729E2B1EE00F86FF8 /* TrafficView_Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficView_Mock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		B5AE12A429E2649800F86FF8 /* MVP_ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				B5AE131429E2B1D200F86FF8 /* Mock_View */,
 				B5AE12A529E2649800F86FF8 /* MVP_ExampleTests.swift */,
 			);
 			path = MVP_ExampleTests;
@@ -166,6 +169,14 @@
 				B5AE12C829E2661C00F86FF8 /* TrafficLightService.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		B5AE131429E2B1D200F86FF8 /* Mock_View */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE131729E2B1EE00F86FF8 /* TrafficView_Mock.swift */,
+			);
+			path = Mock_View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AE131829E2B1EE00F86FF8 /* TrafficView_Mock.swift in Sources */,
 				B5AE12A629E2649800F86FF8 /* MVP_ExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
