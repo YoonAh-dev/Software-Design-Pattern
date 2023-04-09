@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class TrafficLightPresenter {
+protocol TrafficLightPresenterProtocol: AnyObject {
+    func trafficLightColorSelected(colorName: String)
+}
+
+final class TrafficLightPresenter: TrafficLightPresenterProtocol {
 
     // MARK: - property
 
