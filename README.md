@@ -22,3 +22,9 @@
 | | [`#2`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/Observer/Observer_Tutorial2) | - [Example Page](https://icksw.tistory.com/257) <br/> - Store에서 Customer에게 notify주는 예제 <br/> - Subscribe한 Observer는 notify가 생길 때마다 통보받음 <br/> - `Publisher`, `Concrete Publisher`, `Subject` 생성  |
 | Adapter | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/Adapter/Adapter-Example) | - [Example Page](https://joycestudios.tistory.com/33) <br/> - [Example Page2](https://github.com/ochococo/Design-Patterns-In-Swift) <br/> - 기본적인 Adapter 구조 알아가기 <br/> |
 |  | [`#2`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/Adapter/Login-Adapter) | - [Example Page](https://github.com/jaicoco/Swift_Design_Pattern_Study/tree/main/Structural%20Pattern/Adapter%20Pattern/Adapter%20Pattern) <br/> - 다른 Social Login에 맞춘 Adapter 사용 <br/> - LoginService를 생성해서 Adapter에 맞춰서 구현 <br/> |
+
+
+### ETC
+| Title | Data | Description
+|:---------:|:------:|----|
+| Coordinator | [Coordinator.pdf](https://github.com/YoonAh-dev/Software-Design-Pattern/files/11590836/Coordinator.pdf) | 마다가스카 코딩 클럽에서 발표했던 Coordinator Pattern 자료 |
