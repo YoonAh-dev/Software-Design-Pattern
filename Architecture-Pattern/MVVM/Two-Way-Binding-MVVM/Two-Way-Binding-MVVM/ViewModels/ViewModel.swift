@@ -9,14 +9,14 @@ import Foundation
 
 // MARK: - Purple Button ViewModel(Delegate Pattern)
 
-//final class ViewModel {
-//
-//    weak var delegate: PurpleButtonDelegate?
-//
-//    func updateText() {
-//        self.delegate?.updateText("Purple Button is Tapped")
-//    }
-//}
+final class PurpleViewModel {
+
+    weak var delegate: PurpleButtonDelegate?
+
+    func updateText() {
+        self.delegate?.updateText("Purple Button is Tapped")
+    }
+}
 
 // MARK: - Purple Button ViewModel(Closure)
 
@@ -34,3 +34,14 @@ import Foundation
 //        self.text = "Purple Button is Tapped"
 //    }
 //}
+
+// MARK: - Red Button ViewModel(Observable)
+
+final class RedViewModel {
+
+    let text: Observable<String> = Observable(value: "")
+
+    func updateText() {
+        self.text.value = "Red Button is Tapped"
+    }
+}

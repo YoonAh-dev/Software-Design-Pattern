@@ -19,24 +19,35 @@ final class ViewController: UIViewController {
 
     // MARK: - property
 
-    private let viewModel = ViewModel()
+    private let purpleViewModel = PurpleViewModel()
+    private let redViewModel = RedViewModel()
 
     // MARK: - life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // MARK: - Purple Button
-        self.viewModel.delegate = self
+        self.purpleViewModel.delegate = self
+        // MARK: - Red Button
+        self.bindViewModel()
+    }
+
+    // MARK: - func
+
+    private func bindViewModel() {
+        self.redViewModel.text.bind { text in
+            self.descriptionLabel.text = text
+        }
     }
 
     // MARK: - IBAction
 
     @IBAction func didTapPurpleButton(_ sender: Any) {
-//        self.viewModel.updateText()
+        self.purpleViewModel.updateText()
     }
 
     @IBAction func didTapRedButton(_ sender: Any) {
-
+        self.redViewModel.updateText()
     }
 
     @IBAction func didTapGreyButton(_ sender: Any) {
