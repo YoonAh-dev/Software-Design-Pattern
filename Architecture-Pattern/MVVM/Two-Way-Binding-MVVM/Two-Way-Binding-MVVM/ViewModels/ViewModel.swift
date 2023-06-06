@@ -45,3 +45,11 @@ final class RedViewModel {
         self.text.value = "Red Button is Tapped"
     }
 }
+
+// MARK: - Grey Button ViewModel(Bindable)
+
+final class GreyViewModel {
+
+    let text: Bindable<String> = Bindable(value: "Grey Button is Tapped")
+
+}

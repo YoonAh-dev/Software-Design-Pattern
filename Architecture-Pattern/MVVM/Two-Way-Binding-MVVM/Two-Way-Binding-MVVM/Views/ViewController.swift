@@ -21,6 +21,7 @@ final class ViewController: UIViewController {
 
     private let purpleViewModel = PurpleViewModel()
     private let redViewModel = RedViewModel()
+    private let greyViewModel = GreyViewModel()
 
     // MARK: - life cycle
 
@@ -28,7 +29,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         // MARK: - Purple Button
         self.purpleViewModel.delegate = self
-        // MARK: - Red Button
+        // MARK: - Red Button, Grey Button
         self.bindViewModel()
     }
 
@@ -51,7 +52,7 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func didTapGreyButton(_ sender: Any) {
-
+        self.greyViewModel.text.bind(\String.self, to: self.descriptionLabel, \.text)
     }
 }
 
@@ -60,3 +61,4 @@ extension ViewController: PurpleButtonDelegate {
         self.descriptionLabel.text = text
     }
 }
+
