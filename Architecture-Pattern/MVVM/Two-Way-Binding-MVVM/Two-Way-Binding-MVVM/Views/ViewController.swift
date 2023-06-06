@@ -7,23 +7,32 @@
 
 import UIKit
 
+protocol PurpleButtonDelegate: AnyObject {
+    func updateText(_ text: String)
+}
+
 final class ViewController: UIViewController {
 
     // MARK: - ui component
 
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    // MARK: - property
+
+    private let viewModel = ViewModel()
+
     // MARK: - life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // MARK: - Purple Button
+        self.viewModel.delegate = self
     }
 
     // MARK: - IBAction
 
     @IBAction func didTapPurpleButton(_ sender: Any) {
-
+//        self.viewModel.updateText()
     }
 
     @IBAction func didTapRedButton(_ sender: Any) {
@@ -31,7 +40,12 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func didTapGreyButton(_ sender: Any) {
-        
+
     }
 }
 
+extension ViewController: PurpleButtonDelegate {
+    func updateText(_ text: String) {
+        self.descriptionLabel.text = text
+    }
+}

@@ -6,3 +6,31 @@
 //
 
 import Foundation
+
+// MARK: - Purple Button ViewModel(Delegate Pattern)
+
+//final class ViewModel {
+//
+//    weak var delegate: PurpleButtonDelegate?
+//
+//    func updateText() {
+//        self.delegate?.updateText("Purple Button is Tapped")
+//    }
+//}
+
+// MARK: - Purple Button ViewModel(Closure)
+
+//final class ViewModel {
+//
+//    private var text: String = "" {
+//        willSet {
+//            self.didSetText?(newValue)
+//        }
+//    }
+//
+//    var didSetText: ((String) -> Void)?
+//
+//    func updateText() {
+//        self.text = "Purple Button is Tapped"
+//    }
+//}
