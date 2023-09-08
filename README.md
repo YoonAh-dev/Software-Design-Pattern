@@ -1,4 +1,11 @@
-### Architect
+## Architect
+
+* [아키텍쳐 패턴이란?](https://yoonah-dev.oopy.io/9aa8130e-c5b2-4929-a5de-a8ae344717cb)
+* [MVC 정리](https://yoonah-dev.oopy.io/bca9a10e-9adc-4f4b-ac40-115424d02fbb)
+* [MVP 정리](https://yoonah-dev.oopy.io/25e43b61-61e1-4972-b590-6a8eb52fea31)
+* [MVVM 정리](https://yoonah-dev.oopy.io/9ce987de-36b7-476e-9744-66077124b379)
+* [MVVM과 Clean Architecture](https://yoonah-dev.oopy.io/2c6aa722-a46b-47c3-a063-6b822a658940)
+
 | Pattern | tutorial | Description |
 |:---------:|:------:|-----|
 | MVC | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Architecture-Pattern/MVC/MVC_tutorial_%231) | - [Example Page](https://velog.io/@kevinkim2586/iOS-Swift-%EA%B3%B5%EB%B6%80-6-MVC-Design-Pattern-%EB%B0%8F-%EC%A0%81%EC%9A%A9) <br/> - Model Business Logic 담당하는 구조체, 함수 따로 정의 <br/> - 모듈화  |
@@ -15,7 +22,7 @@
 | CleanArchitecture-MVVM | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Architecture-Pattern/CleanArchitecture-MVVM/CleanArchitecture-MVVM-Example) | - [Example Repository](https://github.com/kudoleh/iOS-Clean-Architecture-MVVM) <br/> - [CleanArchitecture-MVVM에 대한 설명](https://eunjin3786.tistory.com/207?category=837198) <br/> - Module를 사용한 Layer Framework <br/>  |
 
 
-### Design
+## Design
 | Pattern | tutorial | Description |
 |:---------:|:------:|-----|
 | Factory Method | [`#1`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/FactoryMethod/Factory_tutorial) | - [Example Page](https://icksw.tistory.com/237) <br/> - [Example Page2](https://github.com/ochococo/Design-Patterns-In-Swift#-factory-method) <br/> - Player Factory화를 통한 단순 예제 <br/> - CurrencyDescribing Factory화를 통한 단순 예제 <br/> - `Product`, `Concrete Product`, `Creator`, `Factory` 생성  |
@@ -26,7 +33,7 @@
 |  | [`#2`](https://github.com/YoonAh-dev/Software-Design-Pattern/tree/main/Design-Pattern/Adapter/Login-Adapter) | - [Example Page](https://github.com/jaicoco/Swift_Design_Pattern_Study/tree/main/Structural%20Pattern/Adapter%20Pattern/Adapter%20Pattern) <br/> - 다른 Social Login에 맞춘 Adapter 사용 <br/> - LoginService를 생성해서 Adapter에 맞춰서 구현 <br/> |
 
 
-### ETC
+## ETC
 | Title | Data | Description
 |:---------:|:------:|----|
 | Coordinator | [Coordinator.pdf](https://github.com/YoonAh-dev/Software-Design-Pattern/files/11590836/Coordinator.pdf) | 마다가스카 코딩 클럽에서 발표했던 Coordinator Pattern 자료 |
